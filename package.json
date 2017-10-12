@@ -1,0 +1,30 @@
+{
+  "name": "firebase-google-auth",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "husky": "^0.14.3",
+    "lint-staged": "^4.2.3",
+    "material-ui": "^0.19.4",
+    "material-ui-icons": "^1.0.0-beta.15",
+    "prettier": "^1.7.4",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-scripts": "1.0.14",
+    "serve": "^6.2.0",
+    "typeface-roboto": "^0.0.35"
+  },
+  "scripts": {
+    "precommit": "lint-staged",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "serve": "react-scripts build && serve -s build"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,json,css}": [
+      "prettier --single-quote --write",
+      "git add"
+    ]
+  }
+}
