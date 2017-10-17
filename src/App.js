@@ -2,8 +2,17 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import firebase from 'firebase/app';
+import config from './config/config';
+
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.fb = firebase.initializeApp(config);
+  }
+
   render() {
+    console.log(this.fb);
     return (
       <div className="App">
         <header className="App-header">
